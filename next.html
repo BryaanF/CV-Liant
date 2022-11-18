@@ -10,10 +10,26 @@
     <h1>ini merupakan item judul:<b id="judull"></b></h1>
     <h1>ini merupakan item artikel:<b id="artikell"></b></h1>
     <script>
-      var article = localStorage.getItem("artikel");
-      var title = localStorage.getItem("judul");
-      document.getElementById("judull").innerHTML = title;
-      document.getElementById("artikell").innerHTML = article;
+      function getParams() {
+        var idx = document.URL.indexOf("?");
+        var params = new Array();
+        if (idx != -1) {
+          var pairs = document.URL.substring(
+            idx + 1,
+            document.URL.length
+          ).split("&");
+          for (var i = 0; i < pairs.length; i++) {
+            nameVal = pairs[i].split("=");
+            params[nameVal[0]] = nameVal[1];
+          }
+        }
+        return params;
+      }
+      params = getParams();
+      judul = unescape(params["judul"]);
+      artikel = unescape(params["artikel"]);
+      document.write("firstname = " + judul + "<br>");
+      document.write("lastname = " + artikel + "<br>");
     </script>
   </body>
 </html>
