@@ -4,32 +4,41 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Send Data with AJAX</title>
+    <title>Say your name!</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      #backgroundinput {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 800px;
+        height: 200px;
+        background-color: black;
+        text-align: center;
+        color: white;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      h1 {
+        margin: 0;
+      }
+    </style>
   </head>
   <body>
-    <h1>Kirim Data dengan Ajax</h1>
-    <form method="get" action="next.html">
-      <p>
-        <label>Title</label>
-        <input
-          name="judul"
-          type="text"
-          id="title"
-          placeholder="judul
-artikel"
-        />
-      </p>
-      <p>
-        <label>Isi Artikel</label><br />
-        <textarea
-          name="artikel"
-          id="article"
-          placeholder="isi artikel..."
-          cols="50"
-          rows="10"
-        ></textarea>
-      </p>
-      <input type="submit" value="Kirim" />
-    </form>
+    <div id="backgroundinput">
+      <h1>SAY YOUR NAME!</h1>
+      <form method="get" action="CV.html">
+        <input type="text" name="name" />
+        <input type="submit" value="Kirim" />
+      </form>
+    </div>
   </body>
 </html>

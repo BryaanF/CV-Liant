@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curriculum Vitae Liant</title>
+    <style media="all">
+      body {
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+      }
+      img {
+        width: 100px;
+        border-radius: 100px;
+        display: block;
+        margin: 50px auto;
+      }
+      h4 {
+        display: inline-block;
+      }
+      
+      div#card-left,
+      div#card-mid,
+      div#card-right {
+        width: 375px;
+        display: inline-block;
+        background-color: black;
+        color: white;
+        margin: 50px 10px;
+        padding: 10px;
+        border-radius: 10px;
+      }
+
+      div#card-left-bottom,
+      div#card-mid-bottom,
+      div#card-right-bottom {
+        width: 375px;
+        display: inline-block;
+        background-color: black;
+        color: white;
+        margin: 50px 10px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 150px;
+      }
+
+      footer {
+        background-color: black;
+        color: white;
+        height: auto;
+        width: 100%;
+        bottom: 0;
+        position: fixed;
+        text-align: left;
+      }
+
+      div#contact,div#contactmeat{
+        text-align: left;
+        float: left;
+        
+      }
+      div#contactmeat{
+        margin-top: 20px;
+        margin-left: 20px;
+      }
+
+      div#copyright{
+  
+        float: right;
+        margin-top: 20px;
+        margin-right: 20px;
+      }
+
+      #vertical-line{
+        border-left: 4px solid white;
+        height: 50px;
+        float: left;
+        margin-left: 5%;
+        margin-top: 20px;
+      }
+
+      @media screen and (max-width: 450px) {
+        div#card-left,
+        div#card-mid,
+        div#card-right {
+          width: 275px;
+        }
+      }
+
+      @media screen and (max-width: 1200px) {
+        #vertical-line{
+          margin-left: 1%;
+        }
+      }
+
+      @media screen and (max-width: 1100px) {
+        div#contactmeat, div#contact, div#copyright{
+          float: none;
+          text-align: center;
+          margin: 10px auto;
+        }
+
+        ul{
+          list-style: none;
+          padding-right: 40px;
+        }
+        #vertical-line{
+          display: none;
+        }
+        footer {
+          position: static;
+          padding: 10px;
+        }
+      }
+      
+    </style>
+  </head>
+  <body>
+    <img src="asset/pp.jpg" alt="" />
+    <h1>Hello <b id="name"></b> , I'm Brilliant Fikri</h1>
+    <h4>Developer |</h4>
+    <h4>Programmer |</h4>
+    <h4>Prototyper</h4>
+    <br />
+    <h2>Educational Background</h2>
+    <div id="card-left">
+      <h3>SMPN 23 Surabaya</h3>
+      <p>
+        I go to SMPN 23 Surabaya as my Junior High School. I learn a lot there.
+      </p>
+    </div>
+    <div id="card-mid">
+      <h3>
+        SMK Telkom Malang
+      </h3>
+      <p>
+        I learn on vocational school with major of computer network, I learned many things there.
+      </p>
+    </div>
+    <div id="card-right">
+      <h3>Institut Teknologi Telkom Surabaya</h3>
+      <p>
+        I am majoring Information System here, I learn a lot about business and development.
+      </p>
+    </div>
+    <h2>Experience</h2>
+    <div id="card-left-bottom">
+      <h3>Web Developer Intern at Lintasarta Surabaya</h3>
+      <p>
+        I work as web developer intern at Lintasarta Surabaya for about 3
+        months. I do code to make sure customer data stored in the web form with
+        HTML, CSS, JS, PHP.
+      </p>
+    </div>
+    <div id="card-right-bottom">
+      <h3>
+        Joining the comitee for introduction for new students at my campus
+      </h3>
+      <p>
+        I do work as Disciplinary Commision to make sure the new students and
+        another commitee obey the existing rules
+      </p>
+    </div>
+    <div id="card-right-bottom">
+      <h3>Finishing the development project from campus and school</h3>
+      <p>
+        I do have many project related to programmig in many language in basic
+        terms. Like Java, Python, Web Programming.
+      </p>
+    </div>
+    <footer>
+      <div id="contactmeat">
+        <p>Contact me at:</p>
+      </div>
+      <div id="contact">
+        <p>
+          <ul>
+            <li>Linkedin : <a style="color: white;" href="https://www.linkedin.com/in/brilliant-fikri-838bb5189/">https://www.linkedin.com/in/brilliant-fikri-838bb5189/</a> </li>
+            <li>Email : briliantfikri@gmail.com</li>
+            <li>Phone : 081331487753</li>
+          </ul>
+        </p>
+      </div>
+      <span id="vertical-line"></span>
+        <div id="copyright">
+          <p>Copyright © 2022 This page created by Liant. All Right Reserved.
+        </div>
+        </p>
+    </footer>
+    <script>
+      function getParams() {
+        var idx = document.URL.indexOf("?");
+        var params = new Array();
+        if (idx != -1) {
+          var pairs = document.URL.substring(
+            idx + 1,
+            document.URL.length
+          ).split("&");
+          for (var i = 0; i < pairs.length; i++) {
+            nameVal = pairs[i].split("=");
+            params[nameVal[0]] = nameVal[1];
+          }
+        }
+        return params;
+      }
+      params = getParams();
+      name = unescape(params["name"]);
+      document.getElementById("name").innerHTML = name;
+
+
+    </script>
+  </body>
+</html>
